@@ -1,0 +1,20 @@
+.galery {
+    display: flex;
+    min-width: 400px;
+    height: 400px;
+    margin: 40px auto 0 auto;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.614);
+}
+.galery img{
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+}
+
+.galery img:hover{
+    cursor: pointer;
+    width: 300px;
+    opacity: 1;
+}
