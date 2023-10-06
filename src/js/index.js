@@ -20,3 +20,5 @@ $(document).ready(function() {
       }
     });
   });
+
+  // Graficas para hotel y habitaciones

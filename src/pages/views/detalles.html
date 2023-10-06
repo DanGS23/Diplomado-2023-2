@@ -7,11 +7,13 @@
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="/dist/output.css">
+    <link rel="stylesheet" href="/src/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 </head>
 <body>
-    
-<nav class="fixed top-0 z-50 w-full bg-blue-400 border-b border-gray-400 dark:bg-gray-800 dark:border-gray-700">
+
+  <nav class="fixed top-0 z-50 w-full bg-blue-400 border-b border-gray-400 dark:bg-gray-800 dark:border-gray-700">
     <div class="px-3 py-3 lg:px-5 lg:pl-3">
       <div class="flex items-center justify-between">
         <div class="flex items-center justify-start">
@@ -21,7 +23,7 @@
                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
              </svg>
            </button>
-          <a href="/src/pages/index.html" class="flex ml-2 md:mr-24">
+          <a href="#" class="flex ml-2 md:mr-24">
             <img class="border rounded-full bg-red-200" src="https://img.icons8.com/emoji/48/hotel-emoji.png" class="h-10 mr-3" alt="FlowBite Logo" />
             <span class="pl-2 self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white">HotelCO</span>
           </a>
@@ -45,52 +47,117 @@
      <div class="h-full px-3 pb-4 overflow-y-auto bg-blue dark:bg-gray-800">
       <ul class="space-y-2 font-medium p-4 ">
          <li>
-             <a href="#" data-url="./viewsHab/listaHab.html" class="flex items-center p-1 hover:bg-blue-500 rounded-xl mb-4" >
+             <a href="#" data-url="dashboard.html" class="flex items-center p-1 hover:bg-blue-200  rounded-xl mb-4" >
+                 <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-6">
+                     <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                   </svg>
+                   <span class=" ml-3">Dashboard</span>
+             </a>
+         </li>
+         <li>
+             <a href="#" data-url="lista.html" class="flex items-center p-1 hover:bg-blue-200 rounded-xl mb-4" >
                  <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                      <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zM3.75 12h.007v.008H3.75V12zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm-.375 5.25h.007v.008H3.75v-.008zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
                    </svg>
                    
-                   <span class=" ml-3">Lista de Habitaciones</span>
+                   <span class=" ml-3">Lista de Hoteles</span>
              </a>
          </li>
          <li>
-             <a href="#" data-url="./viewsHab/agregarHab.html" class="flex items-center p-1 hover:bg-blue-500 rounded-xl mb-4" >
+             <a href="#" data-url="agregar.html" class="flex items-center p-1 hover:bg-blue-200 rounded-xl mb-4" >
                  <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                    </svg>
-                   <span class=" ml-3">Añadir Habitaciones</span>
+                   <span class=" ml-3">Agregar Hotel</span>
              </a>
          </li>
          <li>
-             <a href="#" data-url="./viewsHab/editarHab.html" class="flex items-center p-1 hover:bg-blue-500 rounded-xl mb-4" >
+             <a href="#" data-url="editar.html" class="flex items-center p-1 hover:bg-blue-200 rounded-xl mb-4" >
                  <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                      <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
                    </svg>                          
-                   <span class=" ml-3">Editar Habitaciones</span>
+                   <span class=" ml-3">Editar</span>
              </a>
          </li>
-         <li>
-             <a href="#" data-url="./viewsHab/eliminarHab.html" class="flex items-center p-1 hover:bg-blue-500 rounded-xl mb-4" >
-                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                     <path stroke-linecap="round" stroke-linejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
-                   </svg>
-                   <span class="ml-3">Eliminar </span>
-             </a>
-         </li>
-         
      </ul>
         </ul>
      </div>
   </aside>
   
   <article class="px-8 py-8 sm:ml-64 mt-14">
+    <div class="rounded-lg bg-slate-300 shadow-xl ">
+      <div class="grid md:grid-cols-2">
+        <div class="m-4">
+          <img class="w-full h-80 rounded-t-lg" src="/src/img/5900_pool_b92df465-0c67-4161-b8bb-67f9fc301094.jpg" alt="">
+          <!-- <div class="grid grid-cols-2 mb-4 ">
+            <img class="w-full h-40 rounded-bl-lg"src="/src/img/62752986a0b9f.r_1651848957740.0-73-1500-823.jpeg" alt="">
+            <img class="w-full h-40 rounded-br" src="/src/img/exterior.jpg" alt="">
+          </div> -->
+        </div>
+        <div class=" m-4">
+          <h1 class="text-center font-medium text-4xl">Hotel Lorica</h1>
+          <br>
+          <p class="px-4 pb-4 text-sm text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, dolore quis asperiores dignissimos dolorum quibusdam.</p>
+          <div class="px-4 relative overflow-x-auto shadow-md sm:rounded-lg  bg-blue-50"> 
+            <form class="mt-4">
+                  <div class="grid md:grid-cols-3 md:gap-6 pb-4">
+                    <div class="relative z-0 w-full mb-6 group">
+                        <input type="text" name="floating_email" id="floating_email" class="text-center block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " value="Lorica Hotel" required />
+                        <label for="floating_email" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Nombre del Hotel</label>
+                        
+                    </div>
+                    <div class="relative z-0 w-full mb-6 group">
+                        <input type="number" min="0" max="12" name="floating_password" id="floating_password" class="text-center block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " value="999999" required />
+                        <label for="floating_password" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">NIT</label>
+                        
+                    </div>
+                      <div class="relative z-0 w-full mb-6 group">
+                          <input type="text" name="floating_last_name" id="floating_last_name" class="text-center block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " value="Calle 14a #20-34" required />
+                          <label for="floating_last_name" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Direccion</label>
+                        
+                      </div>
+                    </div>
+                    <div class="grid md:grid-cols-2 md:gap-6">
+                        <div class="relative z-0 w-full mb-6 group">
+                            <input type="text" name="floating_last_name" id="floating_last_name" class="text-center block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " value="Bogota" required />
+                            <label for="floating_last_name" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Ciudad</label>
+                        </div>
+                        <div class="relative z-0 w-full mb-6 group">
+                          <input type="number" name="floating_last_name" id="floating_last_name" class="text-center block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " value="200" required />
+                          <label for="floating_last_name" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">N° Habitaciones</label>
 
-  </article>
-  
+                      </div>
+                    </div>
+                   
+                </div>
+            </form>
+          </div>
+        </div> 
+      </div>
+      <br>
+      <hr>
+      <br>
+      <div>
+        <canvas id="myChart" class="p-8"></canvas>
+        <canvas id="myChart2" class="p-8"></canvas>
+      </div>
+      <hr class="ml-4 mr-4 border-2 ">
+        <div class="flex justify-between px-8 py-8">
+          <a href="/src/pages/index.html"><button type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800 uppercase">Regresar</button>
+          </a>
+          <div class="mr-8">
+            <a href="/src/pages/views/viewsHab/habPrincipal.html"><button type="button" class="text-green-700 hover:text-white border border-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-green-500 dark:text-green-500 dark:hover:text-white dark:hover:bg-green-600 dark:focus:ring-green-800 uppercase">Agregar Habitacion </button></a>
+
+            <a href=""><button type="button" class="text-red-700 hover:text-white border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900 uppercase">Eliminar</button></a>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
-
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="/src/js/index.js"></script>
-</body>
+    <script src="/src/js/graficas.js"></script>
+  </body>
 </html>
